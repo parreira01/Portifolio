@@ -1,0 +1,149 @@
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portifólio Maycon Martins Parreira</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w==" crossorigin="anonymous" referrerpolicy="no-referrer" /> <!-- link do normalize -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https: //fonts.googleapis.com/css2? family= Aberto+Sans:wght@400;700 & display=swap"> <!-- link das fontes open sans do google fonts -->
+
+    
+    <link rel="stylesheet" href="/assets/fonts/neue-machina-regular.otf"> <!-- link da font neue machina que está na pasta fontes dentro da pasta JS -->
+
+    <link rel="stylesheet" href="assets/css/global.css"> <!--link com o arquivo global.css-->
+    <link rel="stylesheet" href="/assets/css/header.css"><!--link com o arquivo header.css-->
+    <link rel="stylesheet" href="/assets/css/acordeon.css">
+    <link rel="stylesheet" href="/assets/css/languages.css">
+    <link rel="stylesheet" href="/assets/css/portifolio.css">
+    <link rel="stylesheet" href="/assets/css/skills.css">
+    <link rel="stylesheet" href="/assets/css/education.css">
+    <link rel="stylesheet" href="/assets/css/experience.css">
+
+</head>
+<body>
+    <main class="main"> <!-- essa div foi criada e nomeada para justificar a criação de um .main no global.css para formatar a posição da foto na margem superior --> 
+        <header class="header">
+            <img src="/assets/FotodifitalMaycon2021.jpg"alt="Foto recente" class="photo">
+
+
+            <h1 class="title">
+                Olá! <br> sou <br> Maycon Parreira
+            </h1>
+
+            <div class="information">
+                <p class="job">Dev Front-END
+                </p>
+                <p class="location">Araguari - MG
+                </p>
+                <p class="phone">
+                    <a href="tel:(34) 9 8814-6118">(34) 9 8814-6118</a>
+                </p>
+                <p class="email">
+                    <a href="mailto:mmparreira01@gmail.com">mmparreira01@gmail.com</a>
+                </p>
+            </div>
+        </header> 
+
+        <section class="acordeon">
+            <button class="trigger">
+                SKILLS
+            </button>
+            
+            <div class="content">
+                <h2>
+                    <u>Ferramentas</u>
+                </h2>
+                
+                <ul class="skills">
+                    <li>DELPH 10.4 - Curso concluído</li>
+                    <li>Java Script - Curso em Andamento</li>
+                    <li>HTML5 - Curso em Andamento</li>
+                    <li>CSS3 - Curso em Andamento</li>
+                    <li>Redes de Computadores - Experiência comprovada</li>
+                    <li>DataBase (MySQL e noSQL) - Curso em Andamento</li>
+                    <li>Angular e React - Curso em Andamento</li>
+                    <li>Linux (Ubuntu server e desktop) - Experiência comprovada</li>
+
+                </ul>
+                
+            </div>
+        </section>
+        <section class="acordeon">
+            <button class="trigger">
+                IDIOMAS 
+            </button>
+            
+            <div class="content">
+                
+                <ul class="languages">
+                    <li>Português - domínio</li>
+                    <li>Inglês - técnico</li>
+                </ul>
+                
+            </div>
+        </section>
+        <section class="acordeon">
+                <button class="trigger">
+                    EDUCAÇÃO 
+                </button>
+                
+                <div class="content">
+                    
+                    <ul class="education">
+                        <li>Graduação em Engenharia em Telecomunicações</li>
+                        <li>Graduação em tecnologia em Telecomunicações</li>
+                        <li>Especialização em Redes de Computadores</li>
+                        <li>MBA em Gestão de Projetos</li>
+                                            
+                </div>
+        </section>
+        <section class="acordeon">
+                <button class="trigger">
+                    PORTIFÓLIO
+                </button>
+                
+                <div class="content">
+                    
+                    <ul class="portifolio">
+                        <li>111059674+parreira01@users.noreply.github.com</li>
+                            <p>
+                                Neste endereço você irá encontrar alguns projetos desenvolvidos que utilizam de linguagem como JS, HTML5 e CSS3. Fiquem a vontade para clonar os projetos e torná-los ainda melhores para o usuário e mais didáticos para os futuros devs.
+                            </p>
+                        <li>www.linkedin.com/in/maycon-parreira-451304167</li>
+                    </ul>
+                    
+                </div>
+        </section>
+        <section class="acordeon">
+            <button class="trigger">
+                EXPERIÊNCIA PROFISSIONAL  
+            </button>
+            
+            <div class="content">
+                
+                <ul class="experience">
+                    <li>Secretaria de Estado de Justiça e Segurança Pública (Poliial Penal)</li>
+                    <li>Empresa Brasileira de Correios (Carteiro)</li>
+                    <li>Instituto Brasileiro de Geografia e Estatistica (Supervisor Censitário)</li>
+                    <li>DKNet - Informática (Gerente e Administrador de Redes)</li>
+                    <li>Oi Telecomunicações S/A (Analista de Operações)</li>
+                    <li>Colégio Berlaar - COC (Analista de Sistemas)</li>
+                    <li>11º Batalhão de Engenharia de Construção (Militar)</li>
+                    <li>Cooperativa dos Cafeicultores do Triângulo (Auxiliar de Armazém, Classificador e Degustador)</li>
+            </div>
+        </section>
+
+    </main>
+
+    <script src="/assets/js/acordeon.js"></script>
+    <sccript src="/assets/js/api.js"></sccript>
+    <sccript src="/assets/js/main.js"></sccript>   
+</body>
+
+</html>

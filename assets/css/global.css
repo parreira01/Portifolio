@@ -1,0 +1,34 @@
+
+* {
+    box-sizing: border-box; /* para garantir que os integrantes do projeto se comportem iguais em termos de caixa*/
+    text-align: center;/* centraliza o texto */
+    font-family: "Open Sans", sans-serif;
+
+}
+
+@font-face {
+    font-family:'Neue Machina'; /* nome da fonte está no arquivo header.css em .header.title */
+    src:url("/assets/fonts/neue-machina-regular.otf"); /* caminho da fonte instalada e copia para o arquivo fonts*/
+} /* fonte teve que ser declarada por este @font-face para ser reconhecida pela página WEB*/
+
+body {
+    background-color: rgb(20, 20, 64); /*cor do pano de fundo da tela */
+    color: #fff; /*cor da fonte*/
+    background-image: linear-gradient(90deg ,rgb(20, 20, 64),rgb(20, 20, 64) 10%, #72D52A , transparent); /*cor degrade da página*/
+}
+
+.main {
+    margin: 1rem;/*margina todo o main, espaçamento da margem (direita, esquerda, topo, base)*/
+    padding: 1rem; /*margina o conteúdo do main para cima ou para baixo */
+    border: 2px solid #fff; /* espessura e cor da borda que envolve todo main (foto/cabeçalho/parágrafo) */
+    border-radius: 2rem; /* para arredondar as bordas da margem */
+
+}
+@media only screen and (min-width: 768px) {
+    .main {
+        max-width: 2756px;
+        margin: 2rem auto;
+        margin-left: 10rem;
+        margin-right: 10rem;
+    }
+}

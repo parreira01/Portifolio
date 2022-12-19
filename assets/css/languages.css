@@ -1,0 +1,23 @@
+
+.languages {
+
+    display: contents;
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: wrap; /*mostra a lista com itens um na frente do outro e conforme a resposividade de tela diminui o itens vão ficando em baixo um do outro.*/
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    font-size: 1.1rem;
+}
+
+.languages li {
+    padding: 4px;
+    flex-direction: row;
+    align-items: center;
+    font-weight: 700;
+    text-align: left;
+    margin: 1rem;
+}
+
+

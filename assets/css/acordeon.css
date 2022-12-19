@@ -1,0 +1,63 @@
+
+.acordeon {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin: 1rem 0;
+    border: 3px solid;
+    border-radius: 1rem;
+    transition: 0.25s;/*tempo de mudança de cor da caixa do acordeon*/ 
+}
+
+.acordeon.open,
+.acordeon:hover{
+    background-color: rgb(20, 20, 64);
+    border-color: rgb(20, 20, 64);
+} /*os cmds para o acordeon:hover é para mudar as corer de fundo e borda quando o mouse passar pelo acordeon*/
+
+.acordeon .trigger {
+    
+    display: flex;
+    flex-direction: row;
+    font-size: 1.5rem;
+    font-weight: 700;
+    padding: 1rem 2rem;/* 1rem de distância da borda superior e inferior do button 'Idiomas' e 2rem da borda à esquerda do button 'Idiomas' */
+    background-color: transparent; /*cor de fundo do button 'Idiomas' */
+    color:#fff; /* cor da fonte 'Idiomas' */
+    border: none; /*o comando border é para mostrar borda e o atributo none é para sumir com a marcação da borda*/
+}
+
+.acordeon .trigger:hover {
+    cursor:pointer;
+} /* o trigger:hover é para mudar a imagem do cursor ao entrar na barra de titulo de Idiomas (acordeon) e o pointer define a mudança de seta para mãozinha dentro da acordeon*/
+
+.acordeon .trigger::after {
+    content: "";
+    display: inline-block;
+    margin-left: auto;/*fazs a margem da imagem arrowtop a esquerda e o auto coloca de forma automática sempre que houver a responsividade*/
+    width: 1.5rem;
+    height: 1.5rem;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-image: url('/assets/img/icons/arrow-top.svg');
+    transition: .25s;/*tempo de animação da imagem arrow-top*/
+      
+}
+
+.acordeon.open .trigger::after{
+    transform: rotate(180deg);/*abre e fecha a caixa idiomas e gira o arrow top em 180 graus*/
+}
+
+.acordeon .content {
+    overflow: hidden;
+    height: 0;
+    opacity: 0;/*define se a fonte dos idiomas fica opaca ou presente dentro do acordeon*/
+    transition: opacity .25s ease-in-out ;
+}
+
+.acordeon.open .content {
+    display: inline-block;
+    padding: 1rem;
+    height: auto;
+    opacity: 1;
+}

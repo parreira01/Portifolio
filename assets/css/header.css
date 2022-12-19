@@ -1,0 +1,99 @@
+
+.header {
+    display: flex; /* comando para deixar cabeçalho e parágrafos em baixo um do outros, formato tabela */
+    flex-direction: column; /*formato em colunas (colun) e ficar do lado direito da foto é row. */
+    align-items: center; /* para centralizar todos os itens, quando o formato é em coluna */
+    position: relative; /* para designar o filho dentro do espaço header*/
+}
+
+.header::after {
+    content: '';/* o after indica que o icone (três pontos) ficará depois da imagem a ser adicionada pelo content*/
+    display: inline-block; /* caixa para colocar alinhado com a linha do bloco */
+    position: absolute; /* fica fixo ao espaço pai do header */
+    top: 1rem;/* para colocar a imagem no topo do header */
+    right: 1rem;/* para posisionar a imagem a direit do header */
+    width: 3rem;
+    height: 3rem; 
+    background-repeat: no-repeat; /* sem repetição da imagem*/
+    background-size: contain; /* para o icone ficar do tamanho adequado da linha automaticamente*/
+    background-image: url("/assets/img/icons/tresPontos.svg")
+}
+
+.header .photo {
+    width: 150px; /* largura foto */
+    height: 210px; /*comprimento foto*/
+    border-radius: 50%;/* para arredondar as bordas da foto*/
+
+}
+
+.header .title {
+    font-family: 'Neue Machina';
+    text-align: center; /* centraliza o título */
+}
+
+.information {
+    display: flex; /* toda vez que tiver um display como flex tem que ter o flex-direction */
+    flex-direction: column;
+    align-items: flex-start; /*direciona o texto para o lado esquerdo, porém condicionado ao width*/
+    width: 60%;
+}
+
+.information p {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: .5rem; /* altera a distância entre linhas nesse caso das linhas dos parágrafos */
+    font-size: 1.125rem;
+}
+
+.information a {
+    color: #fff;
+}
+
+.information p::before {
+    content: '';/* o before indica que o icone ficará antes da imagem a ser adicionada pelo content*/
+    display: inline-block; /* caixa para colocar alinhado com a linha do bloco */
+    width: 24px;
+    height: 24px; 
+    background-repeat: no-repeat; /* repetição da imagem*/
+    background-size: contain; /* para o icone ficar do tamanho adequado da linha automaticamente*/
+    margin-right: .5rem; /* coloca espaço entre o ícone e a descrição da linha*/
+
+}
+
+.information .job::before {
+    background-image: url('/assets/img/icons/job.svg');
+}
+
+.information .location::before {
+    background-image: url('/assets/img/icons/location.svg');
+}
+
+.information .phone::before {
+    background-image: url('/assets/img/icons/phone.svg');
+}
+
+.information .email::before {
+        background-image: url('/assets/img/icons/email.svg');
+}
+
+@media only screen and (min-width: 768px) {
+    .header {
+        display: grid;
+        grid-template-areas:      "photo title"
+            "photo information"
+        
+    }
+   .header .photo {
+        grid-area: photo;
+        margin: 0 auto;
+    }
+    .header .title {
+        grid-area: title;
+        text-align: start;
+        max-width: 200px;
+    } 
+    .header .information {
+        grid-area: information;
+    }        
+} /* o comando @media é para a responsividade de alteração de tela, ou seja, o site responderá automaticamente quando for alterado sua vizualização de mobile até desktop. Esse comando min-width serve para o layout adaptar a tela desse ponto em diante */
